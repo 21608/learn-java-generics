@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Chooser<T> {
+public class CollectionChooser<T> {
     private final List<T> choiceList;
 
-    public Chooser(Collection<T> choices) {
+    public CollectionChooser(Collection<T> choices) {
         choiceList = new ArrayList<>(choices);
     }
 
-    public T choose() {
+    public T chooseOf() {
         Random rnd = ThreadLocalRandom.current();
         return choiceList.get(rnd.nextInt(choiceList.size()));
     }

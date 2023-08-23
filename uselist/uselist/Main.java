@@ -10,7 +10,7 @@ public class Main {
         sList.add("two");
         sList.add("three");
 
-        Chooser<String> chooser = new Chooser<>(sList);
-        System.out.println(chooser.choose());
+        CollectionChooser<String> collectionChooser = new CollectionChooser<>(sList);
+        System.out.println(collectionChooser.chooseOf());
     }
 }
